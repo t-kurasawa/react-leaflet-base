@@ -195,7 +195,7 @@ https://zenn.dev/tris/articles/2021-10-react-leaflet-ts-gsi#%E5%AE%9F%E8%A1%8C%E
 
 このようにして React で OpenStreetMap を表示することが出来ました。
 
-![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/127260/beea11df-96d9-6448-ba1f-36f3857b70df.png)
+![image.png](https://camo.qiitausercontent.com/325d887e6888023a16f630654c8b9eed051d973f/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3132373236302f62656561313164662d393664392d363434382d626131662d3336663338353762373064662e706e67)
 
 # Github にサンプルコードを公開しましたのでご活用ください
 
