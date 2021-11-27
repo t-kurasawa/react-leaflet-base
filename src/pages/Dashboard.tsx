@@ -5,18 +5,14 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Places from '../components/Places';
+import Stockpile from '../components/Stockpile';
 import OpenStreetMap from './OpenStreetMap';
 import Header from '../components/Header'
 import Copyright from '../components/Copyright'
 
-import { useState } from 'react';
-
 const mdTheme = createTheme();
 
 function DashboardContent() {
-
-  const [copyright, setCopyright] = useState<String>('')
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -38,12 +34,6 @@ function DashboardContent() {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {/* Places */}
-              <Grid item xs={12}>
-                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <Places />
-                </Paper>
-              </Grid>
 
               {/* OpenStreetMap */}
               <Grid item xs={12}>
@@ -52,8 +42,15 @@ function DashboardContent() {
                 </Paper>
               </Grid>
 
+              {/* Stockpile */}
+              <Grid item xs={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Stockpile />
+                </Paper>
+              </Grid>
+
             </Grid>
-            <Copyright sx={{ pt: 4 }} copyright={copyright} />
+            <Copyright sx={{ pt: 4 }} />
           </Container>
         </Box>
       </Box>

@@ -9,6 +9,11 @@ import { Provider } from 'react-redux';
 
 import reportWebVitals from './reportWebVitals';
 
+if (process.env.NODE_ENV === 'development') {
+  const { worker } = require('./mock/browser')
+  worker.start()
+}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

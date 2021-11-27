@@ -8,7 +8,7 @@ import List from '@mui/material/List';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
-import { mainListItems, secondaryListItems } from '../components/listItems';
+import { mainListItems, secondaryListItems } from './listItems';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 

@@ -1,8 +1,11 @@
 import { useAppSelector, useAppDispatch } from '../hooks';
 import { selectElements, selectPosition, searchAsync, locationfound } from '../stores/openstreetmap-slice';
+import { stockpileSearchAsync } from '../stores/stockpile-slice';
 
 import { LatLng, LocationEvent } from "leaflet";
 import { useMapEvents, FeatureGroup, Popup, Circle, Tooltip, FeatureGroupProps } from "react-leaflet";
+
+import { Avatar, Card, CardHeader, CardMedia, CardContent, Typography } from '@mui/material';
 
 export const LocationMarker = (props: FeatureGroupProps) => {
     const fillBlueOptions = { fillColor: 'blue' }
@@ -16,7 +19,26 @@ export const LocationMarker = (props: FeatureGroupProps) => {
         ? (
         <Circle key={element.id} center={new LatLng(element.lat,element.lon)} radius={15} >
             <Popup>
-                {element.tags.name || '未登録'}
+                <Card sx={{ maxWidth: 345 }}>
+                    <CardHeader
+                        avatar={<Avatar src="https://randomuser.me/api/portraits/thumb/men/75.jpg"/>}
+                        title={element.tags.name || '未登録'}
+                        subheader="September 14, 2016"
+                    />                    
+                    <CardMedia
+                        component="img"
+                        height="194"
+                        image="https://mui.com/static/images/cards/paella.jpg"
+                        alt="Paella dish"
+                    />
+                    <CardContent>
+                        <Typography variant="body2" color="text.secondary">
+                        This impressive paella is a perfect party dish and a fun meal to cook
+                        together with your guests. Add 1 cup of frozen peas along with the mussels,
+                        if you like.
+                        </Typography>
+                    </CardContent>
+                </Card>
             </Popup>
         </Circle>
         ) 
@@ -36,10 +58,11 @@ export const LocationMarker = (props: FeatureGroupProps) => {
 
             const location = new LatLng(e.latlng.lat, e.latlng.lng)
             const condition = {
-            query: 'bus_stop',
-            location: location
+                query: 'bus_stop',
+                location: location
             }
             dispatch(searchAsync(condition))
+            dispatch(stockpileSearchAsync({params:''}))
         }
     })
 
