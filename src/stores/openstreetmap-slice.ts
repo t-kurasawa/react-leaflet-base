@@ -46,6 +46,7 @@ export const searchAsync = createAsyncThunk(
   async (condition:SearchCondition) => {
     const response = await search(condition);
     // The value we return becomes the `fulfilled` action payload
+    console.log(response.data)
     return response.data;
   }
 );

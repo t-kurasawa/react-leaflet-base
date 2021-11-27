@@ -17,7 +17,6 @@ function preventDefault(event: React.MouseEvent) {
 export const Stockpile = () => {
 
   const stockpiles = useAppSelector(selectStockPiles);
-  console.log(stockpiles)
 
   return (
     <React.Fragment>

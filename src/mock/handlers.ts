@@ -27,8 +27,8 @@ export const handlers = [
             email: 'brad.gibson@example.com'
           },  
           stockQuantity: 100,
-          lat: 0,
-          lng: 0,
+          lat: 35.6694061,
+          lng: 139.8034602,
           address: '東京都千代田区丸の内１丁目',
           registrationDate: '2021-12-04',
           expiryDate: '2026-08-10',
@@ -55,8 +55,8 @@ export const handlers = [
             email: 'brad.gibson@example.com'
           },  
           stockQuantity: 100,
-          lat: 0,
-          lng: 0,
+          lat: 35.6823542,
+          lng: 139.7745045,
           address: '東京都千代田区丸の内１丁目',
           registrationDate: '2021-12-04',
           expiryDate: '2026-08-10',

@@ -14,12 +14,12 @@ export interface StockpilesState {
 }
 
 export interface Stockpile{
-  id: Number,
+  id: number,
   name: String,
   user: RandomUser,
   stockQuantity: Number,
-  lat: Number,
-  lng: Number,
+  lat: number,
+  lng: number,
   address: String,
   registrationDate: String,
   expiryDate: String,
