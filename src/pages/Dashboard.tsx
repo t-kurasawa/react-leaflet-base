@@ -17,7 +17,6 @@ const mdTheme = createTheme();
 function DashboardContent() {
 
   const [copyright, setCopyright] = useState<String>('')
-  const [elements, setElements] = useState<Object>({})
 
   return (
     <ThemeProvider theme={mdTheme}>
@@ -49,7 +48,7 @@ function DashboardContent() {
               {/* OpenStreetMap */}
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
-                  <OpenStreetMap elements={elements}/>
+                  <OpenStreetMap />
                 </Paper>
               </Grid>
 
