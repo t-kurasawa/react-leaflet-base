@@ -68,6 +68,7 @@ const initialState: StockpilesState = {
 export const stockpileSearchAsync = createAsyncThunk(
   STORE_NAME + '/search',
   async (condition:SearchCondition) => {
+    console.log(condition)
     const response = await search(condition);
     // The value we return becomes the `fulfilled` action payload
     console.log(response)
