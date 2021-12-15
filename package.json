@@ -30,7 +30,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "NODE_ENV=development react-scripts start",
+    "start": "react-scripts start",
     "start:production": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
